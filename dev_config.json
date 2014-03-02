@@ -4,10 +4,10 @@
 	},
 	"http":{
 		"sessionSecret":"!#@$%&*^",
-		"host":"http://localhost:8000"
+		"host":"http://slackerq.herokuapp.com"
 	},
 	"redis":{
-		"uri":"redis://app21963700:v3h2MCwkN38O4Tw1@pub-redis-14199.us-east-1-3.1.ec2.garantiadata.com:14199"
+		"uri":"redis://slackerQ:slackerQ@pub-redis-19820.us-east-1-3.1.ec2.garantiadata.com:19820"
 	},
 	"mandrill": {
         "apikey": "EIFimITz1OxbMIQqU8X6EQ"
