@@ -1,0 +1,50 @@
+{{!< default}} {{#contentFor "title"}}Tasks{{/contentFor}}
+<h2>Manage your Tasks</h2>
+<div class="row">
+	<div class="col-md-12 b-siteList" role="b-siteList"
+		onclick="return {url: '/manageSites/list', removeUrl: '/sites/remove', editSiteUrl: '/sites/edit'};">
+		<div class="alert alert-danger help-block b-siteList__errorMessage"></div>
+        <div class="alert alert-success help-block b-siteList__successMessage"><strong>Success!</strong></div>
+		<div class="text-info">List of Task(s):</div>
+		<div class="b-siteList__list"></div>
+
+
+		<div class="b-siteList__addBlock">
+			<button type="button"
+				class="btn btn-success b-siteList__addButton">Create
+				Task</button>
+
+			<form class="b-siteList__addForm col-md-6" action="/sites/add"
+				method="post" role="b-ajaxForm" autocomplete="off">
+				<h4>Create Task</h4>
+				<div class="form-group col-md-12">
+	        <div class="form-group col-md-8">
+	            <label class="control-label">What's it about?</label>
+	            <input type="text" name="keyword" required placeholder="game, study.." class="form-control">
+	        </div>
+	        <div class="form-group col-md-10">
+	            <label class="control-label">Describe it</label>
+	            <input type="text" name="description" required class="form-control">
+	        </div>
+			<div class="form-group col-md-8">
+	            <label class="control-label">When do you intend to finish?</label>
+	            <input type="text" name="time"  class="form-control">
+	        </div>
+	        <div class="form-group col-md-10">
+	        <label class="control-label">How important is it to you?</label>
+	        <div class="bfh-selectbox" data-name="importance" id="importance" data-value="ASAP">
+	            <div data-value="ALL I HAVE IS TIME">ALL I HAVE IS TIME</div>
+	            <div data-value="I COULD LOSE MONEY">I COULD LOSE MONEY</div>
+	            <div data-value="PRETTY IMPORTANT">PRETTY IMPORTANT</div>
+	            <div data-value="ASAP">ASAP</div>
+	            <div data-value="NO HURRY">NO HURRY</div>
+	        </div>
+	        </div>
+	    	<button type="submit" class="btn btn-lg btn-success btn-block b-ajaxForm__submitButton" autocomplete="off">Create</button>
+	    	<label class="help-block text-danger b-ajaxForm__errorMessage"></label>
+	    	<label class="help-block text-success b-ajaxForm__successMessage"></label>
+
+			</form>
+		</div>
+	</div>
+</div>

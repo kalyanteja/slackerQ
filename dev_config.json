@@ -1,0 +1,18 @@
+{
+	"mongodb":{
+		"uri":"mongodb://kalyan:kalyan@troup.mongohq.com:10076/App1"
+	},
+	"http":{
+		"sessionSecret":"!#@$%&*^",
+		"host":"http://localhost:8000"
+	},
+	"redis":{
+		"uri":"redis://app21963700:v3h2MCwkN38O4Tw1@pub-redis-14199.us-east-1-3.1.ec2.garantiadata.com:14199"
+	},
+	"mandrill": {
+        "apikey": "EIFimITz1OxbMIQqU8X6EQ"
+    },
+    "emails":{
+    	"info":"info@slackerq.com"
+    }
+}

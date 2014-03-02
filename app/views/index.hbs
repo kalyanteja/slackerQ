@@ -1,0 +1,45 @@
+{{!< default}}
+
+{{#contentFor "title"}}slackerQ{{/contentFor}}
+
+
+
+<div class="b-siteList" role="b-siteList" onclick="return {url: '/sites/list', removeUrl: '/sites/remove'};">
+	<div class="col-md-3">
+		<h2>My Tasks</h2>
+        <div class="b-siteList__list">
+        </div>
+        <button type="button" class="btn btn-success" onclick="window.location='/sites';">Manage Tasks</button>
+    </div>
+    <div class="col-md-6 col-md-push-1">
+    <h2>Create a Task</h2>
+    <br />
+    	<form role="b-ajaxForm" class="form-sign" method="post" action="/sites/add">
+	        <div class="form-group col-md-8">
+	            <label class="control-label">What's it about?</label>
+	            <input type="text" name="keyword" required placeholder="game, study.." class="form-control">
+	        </div>
+	        <div class="form-group col-md-10">
+	            <label class="control-label">Describe it</label>
+	            <input type="text" name="description" required class="form-control">
+	        </div>
+			<div class="form-group col-md-8">
+	            <label class="control-label">When do you intend to finish?</label>
+	            <input type="text" name="time"  class="form-control">
+	        </div>
+	        <div class="form-group col-md-10">
+	        <label class="control-label">How important is it to you?</label>
+	        <div class="bfh-selectbox" data-name="importance" id="importance" data-value="ASAP">
+	            <div data-value="ALL I HAVE IS TIME">ALL I HAVE IS TIME</div>
+	            <div data-value="I COULD LOSE MONEY">I COULD LOSE MONEY</div>
+	            <div data-value="PRETTY IMPORTANT">PRETTY IMPORTANT</div>
+	            <div data-value="ASAP">ASAP</div>
+	            <div data-value="NO HURRY">NO HURRY</div>
+	        </div>
+	        </div>
+	    	<button type="submit" class="btn btn-lg btn-success btn-block b-ajaxForm__submitButton" autocomplete="off">Create</button>
+	    	<label class="help-block text-danger b-ajaxForm__errorMessage"></label>
+	    	<label class="help-block text-success b-ajaxForm__successMessage"></label>
+		</form>
+    </div>
+</div>
