@@ -1,4 +1,4 @@
-pingjs
+slackerQ
 ======
 
-monitor service
+Task managenent tool
